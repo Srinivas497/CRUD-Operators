@@ -65,9 +65,9 @@ app.delete('/products/:id', (req, res) => {
   res.json({ message: `Product ${removed[0].name} deleted successfully` });
 });
 
-// Bonus endpoint
 app.get('/products/instock', (req, res) => {
   res.json(readProducts().filter(p => p.inStock === true));
 });
 
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+
